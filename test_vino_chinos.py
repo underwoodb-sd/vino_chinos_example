@@ -16,7 +16,7 @@ Test Cases:
     √ Can call
     - Return converted list when given an integer list
 3. Printer:
-    - Can call
+    √ Can call
     - Given an empty list, print an error message
     - Given a list, prints expected values
 
@@ -30,3 +30,7 @@ def test_can_call_vino_chino_converter():
 
 def test_can_call_vino_chino_mapper():
     vc_list = vino_chino_mapper([])
+
+
+def test_can_call_vino_chino_printer():
+    vino_chino_printer([])
