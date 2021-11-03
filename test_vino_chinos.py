@@ -45,14 +45,11 @@ def test_vino_chino_converter(input, expected):
     assert vc == expected
 
 
-def test_vino_chino_mapper_given_empty_list_returns_empty_list():
-    vc_list = vino_chino_mapper([])
-    assert vc_list == []
+mapper_test_cases = [([], []), ([1, 3, 5, 15], ["1", "Vino", "Chinos", "Vino Chinos"])]
 
 
-def test_vino_chino_mapper_given_list_returns_mapped_list():
-    input = [1, 3, 5, 15]
-    expected = ["1", "Vino", "Chinos", "Vino Chinos"]
+@pytest.mark.parametrize("input,expected", mapper_test_cases)
+def test_vino_chino_mapper(input, expected):
     vc_list = vino_chino_mapper(input)
     assert vc_list == expected
 
