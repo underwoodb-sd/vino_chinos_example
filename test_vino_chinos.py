@@ -55,13 +55,21 @@ def test_vino_chino_mapper(input, expected):
 
 
 printer_test_cases = [
-    ([], [call("Nothing to print.")]),
-    ([1, 3, 5, 15], [call("1"), call("Vino"), call("Chinos"), call("Vino Chinos")]),
+    ([], [call("Nothing to print.")], None),
+    (
+        [1, 3, 5, 15],
+        [call("1"), call("Vino"), call("Chinos"), call("Vino Chinos")],
+        call("Nothing to print."),
+    ),
 ]
 
 
-@pytest.mark.parametrize("input_list,expected_calls", printer_test_cases)
+@pytest.mark.parametrize(
+    "input_list,expected_calls,unexpected_calls", printer_test_cases
+)
 @patch("builtins.print")
-def test_vino_chino_printer(mock_print, input_list, expected_calls):
+def test_vino_chino_printer(mock_print, input_list, expected_calls, unexpected_calls):
     vino_chino_printer(input_list)
     mock_print.assert_has_calls(expected_calls)
+    if unexpected_calls:
+        assert unexpected_calls not in mock_print.call_args_list

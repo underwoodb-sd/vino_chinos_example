@@ -29,7 +29,11 @@ def vino_chino_mapper(num_list):
 def vino_chino_printer(num_list):
     """Prints vino chinos list"""
     vc_list = vino_chino_mapper(num_list)
+    if not vc_list:
+        print("Nothing to print.")
     for vc in vc_list:
         print(vc)
-    else:
-        print("Nothing to print.")
+
+
+if __name__ == "__main__":
+    vino_chino_printer(list(range(1, 101)))
