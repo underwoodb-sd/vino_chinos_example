@@ -15,7 +15,7 @@ Test Cases:
 2. List mapper:
     √ Can call
     √ Return empty list if given empty list
-    - Return converted list when given an integer list
+    √ Return converted list when given an integer list
 3. Printer:
     √ Can call
     - Given an empty list, print an error message
@@ -47,6 +47,13 @@ def test_vino_chino_converter(input, expected):
 def test_vino_chino_mapper_given_empty_list_returns_empty_list():
     vc_list = vino_chino_mapper([])
     assert vc_list == []
+
+
+def test_vino_chino_mapper_given_list_returns_mapped_list():
+    input = [1, 3, 5, 15]
+    expected = ["1", "Vino", "Chinos", "Vino Chinos"]
+    vc_list = vino_chino_mapper(input)
+    assert vc_list == expected
 
 
 def test_can_call_vino_chino_printer():
