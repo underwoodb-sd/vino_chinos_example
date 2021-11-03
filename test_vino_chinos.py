@@ -44,6 +44,16 @@ def test_vino_chino_converter_6():
     assert vc == "Vino"
 
 
+def test_vino_chino_converter_5():
+    vc = vino_chino_converter(5)
+    assert vc == "Chinos"
+
+
+def test_vino_chino_converter_10():
+    vc = vino_chino_converter(10)
+    assert vc == "Chinos"
+
+
 def test_can_call_vino_chino_mapper():
     vc_list = vino_chino_mapper([])
 
