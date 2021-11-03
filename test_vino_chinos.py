@@ -10,7 +10,7 @@ Test Cases:
     √ Can call
     √ Convert regular number to string
     √ Convert number divisible by 3 to "Vino"
-    - Convert number divisible by 5 to "Chinos"
+    √ Convert number divisible by 5 to "Chinos"
     - Convert number divisible by 3 and 5 to "Vino Chinos"
 2. List mapper:
     √ Can call
