@@ -28,4 +28,8 @@ def vino_chino_mapper(num_list):
 
 def vino_chino_printer(num_list):
     """Prints vino chinos list"""
-    print("Nothing to print.")
+    vc_list = vino_chino_mapper(num_list)
+    for vc in vc_list:
+        print(vc)
+    else:
+        print("Nothing to print.")

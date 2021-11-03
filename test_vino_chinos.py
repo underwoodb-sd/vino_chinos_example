@@ -18,8 +18,8 @@ Test Cases:
     √ Return converted list when given an integer list
 3. Printer:
     √ Can call
-    - Given an empty list, print an error message
-    - Given a list, prints expected values
+    √ Given an empty list, print an error message
+    √ Given a list, prints expected values
 
 """
 from vino_chinos import vino_chino_converter, vino_chino_mapper, vino_chino_printer
@@ -61,3 +61,11 @@ def test_vino_chino_mapper_given_list_returns_mapped_list():
 def test_can_call_vino_chino_printer(mock_print):
     vino_chino_printer([])
     mock_print.assert_called_with("Nothing to print.")
+
+
+@patch("builtins.print")
+def test_can_call_vino_chino_printer(mock_print):
+    input_list = [1, 3, 5, 15]
+    expected_calls = [call("1"), call("Vino"), call("Chinos"), call("Vino Chinos")]
+    vino_chino_printer(input_list)
+    mock_print.assert_has_calls(expected_calls)
