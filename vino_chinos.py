@@ -10,7 +10,7 @@ following qualifications:
 """
 
 
-def vino_chino_converter():
+def vino_chino_converter(num):
     """Convert number based on vino chino algorithm"""
 
 
