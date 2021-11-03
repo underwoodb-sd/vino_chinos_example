@@ -38,21 +38,7 @@ converter_test_cases = [
     (30, "Vino Chinos"),
 ]
 
-
-@pytest.mark.parametrize("input,expected", converter_test_cases)
-def test_vino_chino_converter(input, expected):
-    vc = vino_chino_converter(input)
-    assert vc == expected
-
-
 mapper_test_cases = [([], []), ([1, 3, 5, 15], ["1", "Vino", "Chinos", "Vino Chinos"])]
-
-
-@pytest.mark.parametrize("input,expected", mapper_test_cases)
-def test_vino_chino_mapper(input, expected):
-    vc_list = vino_chino_mapper(input)
-    assert vc_list == expected
-
 
 printer_test_cases = [
     ([], [call("Nothing to print.")], None),
@@ -62,6 +48,18 @@ printer_test_cases = [
         call("Nothing to print."),
     ),
 ]
+
+
+@pytest.mark.parametrize("input,expected", converter_test_cases)
+def test_vino_chino_converter(input, expected):
+    vc = vino_chino_converter(input)
+    assert vc == expected
+
+
+@pytest.mark.parametrize("input,expected", mapper_test_cases)
+def test_vino_chino_mapper(input, expected):
+    vc_list = vino_chino_mapper(input)
+    assert vc_list == expected
 
 
 @pytest.mark.parametrize(
