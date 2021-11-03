@@ -21,6 +21,7 @@ Test Cases:
     - Given a list, prints expected values
 
 """
+from vino_chinos import vino_chino_converter, vino_chino_mapper, vino_chino_printer
 
 
 def test_nothing():
