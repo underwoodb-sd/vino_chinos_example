@@ -23,6 +23,7 @@ def vino_chino_converter(num):
 
 def vino_chino_mapper(num_list):
     """Map vino chino converter across given list"""
+    return []
 
 
 def vino_chino_printer(num_list):

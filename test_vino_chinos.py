@@ -43,8 +43,9 @@ def test_vino_chino_converter(input, expected):
     assert vc == expected
 
 
-def test_can_call_vino_chino_mapper():
+def test_vino_chino_mapper_given_empty_list_returns_empty_list():
     vc_list = vino_chino_mapper([])
+    assert vc_list == []
 
 
 def test_can_call_vino_chino_printer():
