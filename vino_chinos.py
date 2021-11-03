@@ -18,5 +18,5 @@ def vino_chino_mapper(num_list):
     """Map vino chino converter across given list"""
 
 
-def vino_chino_printer():
+def vino_chino_printer(num_list):
     """Prints vino chinos list"""
