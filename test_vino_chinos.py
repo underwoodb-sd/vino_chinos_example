@@ -23,6 +23,7 @@ Test Cases:
 
 """
 from vino_chinos import vino_chino_converter, vino_chino_mapper, vino_chino_printer
+from unittest.mock import patch, call
 import pytest
 
 
@@ -56,5 +57,7 @@ def test_vino_chino_mapper_given_list_returns_mapped_list():
     assert vc_list == expected
 
 
-def test_can_call_vino_chino_printer():
+@patch("builtins.print")
+def test_can_call_vino_chino_printer(mock_print):
     vino_chino_printer([])
+    mock_print.assert_called_with("Nothing to print.")

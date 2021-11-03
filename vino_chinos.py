@@ -28,3 +28,4 @@ def vino_chino_mapper(num_list):
 
 def vino_chino_printer(num_list):
     """Prints vino chinos list"""
+    print("Nothing to print.")
