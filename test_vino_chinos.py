@@ -14,6 +14,7 @@ Test Cases:
     √ Convert number divisible by 3 and 5 to "Vino Chinos"
 2. List mapper:
     √ Can call
+    √ Return empty list if given empty list
     - Return converted list when given an integer list
 3. Printer:
     √ Can call
