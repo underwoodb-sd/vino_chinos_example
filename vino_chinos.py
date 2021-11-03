@@ -12,6 +12,7 @@ following qualifications:
 
 def vino_chino_converter(num):
     """Convert number based on vino chino algorithm"""
+    return str(num)
 
 
 def vino_chino_mapper(num_list):

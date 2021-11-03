@@ -8,7 +8,7 @@ Features:
 Test Cases:
 1. Vino chinos converter:
     √ Can call
-    - Convert regular number to string
+    √ Convert regular number to string
     - Convert number divisible by 3 to "Vino"
     - Convert number divisible by 5 to "Chinos"
     - Convert number divisible by 3 and 5 to "Vino Chinos"
@@ -24,8 +24,14 @@ Test Cases:
 from vino_chinos import vino_chino_converter, vino_chino_mapper, vino_chino_printer
 
 
-def test_can_call_vino_chino_converter():
+def test_vino_chino_converter_1():
     vc = vino_chino_converter(1)
+    assert vc == "1"
+
+
+def test_vino_chino_converter_2():
+    vc = vino_chino_converter(2)
+    assert vc == "2"
 
 
 def test_can_call_vino_chino_mapper():
