@@ -22,31 +22,23 @@ Test Cases:
 
 """
 from vino_chinos import vino_chino_converter, vino_chino_mapper, vino_chino_printer
+import pytest
 
 
-def test_vino_chino_converter_1():
-    vc = vino_chino_converter(1)
-    assert vc == "1"
+converter_test_cases = [
+    (1, "1"),
+    (2, "2"),
+    (3, "Vino"),
+    (5, "Chinos"),
+    (6, "Vino"),
+    (10, "Chinos"),
+]
 
 
-def test_vino_chino_converter_2():
-    vc = vino_chino_converter(2)
-    assert vc == "2"
-
-
-def test_vino_chino_converter_3():
-    vc = vino_chino_converter(3)
-    assert vc == "Vino"
-
-
-def test_vino_chino_converter_6():
-    vc = vino_chino_converter(6)
-    assert vc == "Vino"
-
-
-def test_vino_chino_converter_5():
-    vc = vino_chino_converter(5)
-    assert vc == "Chinos"
+@pytest.mark.parametrize("input,expected", converter_test_cases)
+def test_vino_chino_converter(input, expected):
+    vc = vino_chino_converter(input)
+    assert vc == expected
 
 
 def test_vino_chino_converter_10():
