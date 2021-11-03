@@ -13,7 +13,7 @@ Test Cases:
     - Convert number divisible by 5 to "Chinos"
     - Convert number divisible by 3 and 5 to "Vino Chinos"
 2. List mapper:
-    - Can call
+    √ Can call
     - Return converted list when given an integer list
 3. Printer:
     - Can call
@@ -26,3 +26,7 @@ from vino_chinos import vino_chino_converter, vino_chino_mapper, vino_chino_prin
 
 def test_can_call_vino_chino_converter():
     vc = vino_chino_converter(1)
+
+
+def test_can_call_vino_chino_mapper():
+    vc_list = vino_chino_mapper([])

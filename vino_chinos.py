@@ -14,7 +14,7 @@ def vino_chino_converter(num):
     """Convert number based on vino chino algorithm"""
 
 
-def vino_chino_mapper():
+def vino_chino_mapper(num_list):
     """Map vino chino converter across given list"""
 
 
