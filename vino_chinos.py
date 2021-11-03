@@ -12,6 +12,8 @@ following qualifications:
 
 def vino_chino_converter(num):
     """Convert number based on vino chino algorithm"""
+    if num % 15 == 0:
+        return "Vino Chinos"
     if num % 3 == 0:
         return "Vino"
     if num % 5 == 0:

@@ -11,7 +11,7 @@ Test Cases:
     √ Convert regular number to string
     √ Convert number divisible by 3 to "Vino"
     √ Convert number divisible by 5 to "Chinos"
-    - Convert number divisible by 3 and 5 to "Vino Chinos"
+    √ Convert number divisible by 3 and 5 to "Vino Chinos"
 2. List mapper:
     √ Can call
     - Return converted list when given an integer list
@@ -32,6 +32,8 @@ converter_test_cases = [
     (5, "Chinos"),
     (6, "Vino"),
     (10, "Chinos"),
+    (15, "Vino Chinos"),
+    (30, "Vino Chinos"),
 ]
 
 
